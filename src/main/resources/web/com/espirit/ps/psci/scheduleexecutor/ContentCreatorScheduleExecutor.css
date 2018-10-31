@@ -1,0 +1,27 @@
+.log {
+	white-space: nowrap;
+	height: 100%;
+	overflow: scroll;
+}
+.rowOpen, .rowClose {
+	font-family: arial;
+	font-size: 12px;
+	border-bottom: 1px solid black;
+	width:100%;
+}
+.rowClose {
+	height: 14px;
+	overflow: hidden;
+}
+.info {
+	color: green;
+	font-weight: bold;
+}
+.warn {
+	color: yellow;
+	font-weight: bold;
+}
+.error {
+	color: red;
+	font-weight: bold;
+}

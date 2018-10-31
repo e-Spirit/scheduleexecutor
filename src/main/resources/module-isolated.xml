@@ -1,0 +1,46 @@
+<module>
+	<name>${project.name}</name>
+	<displayName>${project.name} (L, I)</displayName>
+	<version>${project.version}</version>
+	<description>${project.description}</description>
+	<vendor>${project.organization.name}</vendor>
+	<components>
+		<public>
+			<name>ScheduleEntryValueProvider</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.ScheduleEntryValueProvider</class>
+		</public>
+		<public>
+			<name>ExecuteScheduleEntry</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ExecuteScheduleEntry</class>
+			<hidden>true</hidden>
+		</public>
+		<public>
+			<name>ScheduleExecutionWebeditToolbarActionsItemsPlugin</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ScheduleExecutionWebeditToolbarActionsItemsPlugin</class>
+			<hidden>true</hidden>
+		</public>
+		<public>
+			<name>ShowLogFile</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ShowLogFile</class>
+			<hidden>true</hidden>
+		</public>
+		<public>
+			<name>ResourceLoader</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ResourceLoader</class>
+			<hidden>true</hidden>
+		</public>
+		<web-app scopes="global,project">
+			<name>ContentCreatorScheduleExecutor</name>
+			<displayname>ContentCreatorScheduleExecutor</displayname>
+			<web-xml>WEB-INF/web.xml</web-xml>
+			<web-resources>
+				<resource target="/com/espirit/ps/psci/scheduleexecutor">web/com/espirit/ps/psci/scheduleexecutor/ContentCreatorScheduleExecutor.js</resource>
+				<resource target="/com/espirit/ps/psci/scheduleexecutor">web/com/espirit/ps/psci/scheduleexecutor/ContentCreatorScheduleExecutor.css</resource>
+				${module.resources.global.isolated.web}
+			</web-resources>
+		</web-app>
+	</components>
+	<resources>
+		${module.resources.global.isolated}
+	</resources>	
+</module>

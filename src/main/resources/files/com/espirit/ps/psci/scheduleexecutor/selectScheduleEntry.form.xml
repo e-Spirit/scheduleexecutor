@@ -1,0 +1,13 @@
+<CMS_MODULE>
+	<CMS_INPUT_COMBOBOX name="scheduleEntry" hFill="yes" singleLine="no" useLanguages="no">
+		<CMS_INCLUDE_OPTIONS type="public">
+			<NAME>ScheduleEntryValueProvider</NAME>
+			<PARAMS>
+				<PARAM name="showSystemScheduleEntries">true</PARAM>
+			</PARAMS>
+		</CMS_INCLUDE_OPTIONS>
+		<LANGINFOS>
+			<LANGINFO lang="*" label="Auftrag" />
+		</LANGINFOS>
+	</CMS_INPUT_COMBOBOX>
+</CMS_MODULE>

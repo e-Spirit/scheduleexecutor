@@ -1,0 +1,21 @@
+<CMS_MODULE>
+	<FS_REFERENCE name="startNode" hFill="yes" useLanguages="no">
+		<FILTER>
+			<ALLOW type="pageref"/>
+			<ALLOW type="pagereffolder"/>
+			<ALLOW type="media"/>
+			<ALLOW type="mediafolder"/>
+		</FILTER>
+		<LANGINFOS>
+			<LANGINFO lang="*" label="Select start node"/>
+		</LANGINFOS>
+		<PROJECTS>
+			<LOCAL name=".">
+				<SOURCES>
+					<FOLDER name="root" store="mediastore"/>
+					<FOLDER name="root" store="sitestore"/>
+				</SOURCES>
+			</LOCAL>
+		</PROJECTS>
+	</FS_REFERENCE>
+</CMS_MODULE>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.espirit.ps.psci</groupId>
+	<artifactId>scheduleexecutor</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	
+	<name>ContentCreatorScheduleStarter</name>
+	<description>Plugin to Start Schedule-Entries from ContentCreator</description>
+
+	<parent>
+		<groupId>com.espirit.ps.maven</groupId>
+		<artifactId>firstspirit-module-parent-pom</artifactId>
+		<version>3.0.0</version>
+	</parent>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<!-- module parent pom configuration -->
+		<maven-compiler.source-version>${maven.compiler.source}</maven-compiler.source-version>
+		<maven-compiler.target-version>${maven.compiler.target}</maven-compiler.target-version>
+
+		<firstspirit.version>5.2.181007</firstspirit.version>
+	</properties>
+
+	<licenses>
+		<license>
+			<name></name>
+			<url></url>
+			<comments></comments>
+			<distribution></distribution>
+		</license>
+	</licenses>
+	
+	<inceptionYear>2018</inceptionYear>
+	
+	<organization>
+		<name>e-Spirit AG</name>
+		<url>http://www.e-spirit.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id><![CDATA[Zeidler, Peter <zeidler@e-spirit.com>]]></id>
+			<name>Peter Zeidler</name>
+			<email>zeidler@e-spirit.com</email>
+			<organization>e-Spirit AG</organization>
+			<organizationUrl>http://www.e-spirit.com</organizationUrl>
+			<roles>
+				<role>Senior Consultant</role>
+			</roles>
+			<timezone>GMT +1</timezone>
+		</developer>
+	</developers>
+
+	<scm>
+		<!-- TODO: add here the right urls -->
+		<url>https://git.e-spirit.de/projects/PSCI/repos/scheduleexecutor/browse</url>
+		<connection>scm:git:ssh://git@git.e-spirit.de:7999/psci/scheduleexecutor.git</connection>
+		<developerConnection>scm:git:ssh://git@git.e-spirit.de:7999/psci/scheduleexecutor.git</developerConnection>
+	</scm>
+<!-- 	<issueManagement> -->
+<!-- 		<system>Jira</system> -->
+<!-- 		<url>https://projects.e-spirit.de/browse/URL</url> -->
+<!-- 	</issueManagement> -->
+	<ciManagement>
+		<system>Bamboo</system>
+		<url>https://pmci.e-spirit.de/browse/PSCI-PSE</url>
+	</ciManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.6</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-module-markdown</artifactId>
+						<version>1.7</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.7</version><!--$NO-MVN-MAN-VER$-->
+				<executions>
+					<execution>
+						<id>copy-readme-md</id>
+						<phase>pre-site</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+
+						<configuration>
+							<outputDirectory>${basedir}/src/site/markdown/</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/</directory>
+									<includes>
+										<include>readme.md</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>
+					maven-project-info-reports-plugin
+				</artifactId>
+				<version>2.9</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>de.espirit.firstspirit</groupId>
+			<artifactId>fs-isolated-runtime</artifactId>
+			<version>${firstspirit.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

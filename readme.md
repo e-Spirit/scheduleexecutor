@@ -10,8 +10,8 @@
 
 ## Versions
 
-  - Java: 
-  - FirstSpirit: 
+  - Java: 1.8
+  - FirstSpirit: 5.2.181007
 
 ## API References
 
@@ -19,24 +19,8 @@
 | --- | --- |
 | de.espirit.firstspirit fs\-isolated\-runtime |  \-  |
 
-## PS library dependencies
-
-* 
-
 ## Developers
 
 | Name | Roles  | Email | 
 | ---- | ------ | ----- |
-|      |        |       |
-
-## Contributors
-
-| Name | Roles  | Email |
-| ---- | ------ | ----- |
-|      |        |       |
-
-## Licenses
-
-| License | Url |
-| ------- | --- |
-|         |     |
+| Peter Zeidler | Senior Consultant | zeidler@e-spirit.com |
