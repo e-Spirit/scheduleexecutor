@@ -22,7 +22,7 @@ public class ScheduleExecutionWebeditToolbarActionsItemsPlugin implements Webedi
 
 	@Override
 	public Collection<? extends WebeditToolbarItem> getItems() {
-		return Collections.<WebeditToolbarItem> singletonList(new ScheduleExecutionWebeditToolbarItem());
+		return Collections.<WebeditToolbarItem> singletonList(new ScheduleExecutionWebeditItemsPlugin());
 	}
 
 }

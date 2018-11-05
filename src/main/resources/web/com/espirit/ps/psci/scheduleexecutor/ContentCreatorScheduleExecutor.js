@@ -42,7 +42,7 @@ CCSE = {
 	},
 	readLines : function(callback) {
 		top.WE_API.Common.execute(
-				"class:com.espirit.ps.psci.schedulestarter.plugin.ShowLogFile",
+				"class:com.espirit.ps.psci.scheduleexecutor.plugin.ShowLogFile",
 				{
 					"fromDate" : CCSE.fromDate,
 					"scheduleEntryId" : CCSE.scheduleEntryId,

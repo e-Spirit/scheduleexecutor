@@ -3,7 +3,6 @@ package com.espirit.ps.psci.scheduleexecutor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import de.espirit.common.base.Logging;
 import de.espirit.firstspirit.access.AdminService;
 import de.espirit.firstspirit.access.ServicesBroker;
 import de.espirit.firstspirit.access.User;
@@ -43,9 +42,7 @@ public class ScheduleHelper {
 
 	public static ScheduleEntryState execute(ScheduleEntry scheduleEntry) throws ScheduleEntryRunningException {
 		ScheduleEntryControl scheduleEntryControl = scheduleEntry.execute();
-		Logging.logInfo("schedule_entry started", ScheduleHelper.class);
 		scheduleEntryControl.awaitTermination();
-		Logging.logInfo("schedule_entry finished", ScheduleHelper.class);
 		return scheduleEntryControl.getState();
 	}
 
@@ -98,7 +95,7 @@ public class ScheduleHelper {
 		}
 
 		for (Group group : scheduleEntry.getGroups()) {
-			// prüfung ob user in den berechtigten Gruppen ist muss so erfolgen, da externe Gruppen nicht mit aufgelöst werden
+			// Prüfung ob user in den berechtigten Gruppen ist muss so erfolgen, da externe Gruppen nicht mit aufgelöst werden
 			if (group.isMember(user)) {
 				return true;
 			}

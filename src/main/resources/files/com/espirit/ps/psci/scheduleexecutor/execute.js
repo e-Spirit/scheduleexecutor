@@ -1,5 +1,5 @@
 WE_API.Common.execute(
-	"class:com.espirit.ps.psci.schedulestarter.plugin.ExecuteScheduleEntry", 
+	"class:com.espirit.ps.psci.scheduleexecutor.plugin.ExecuteScheduleEntry", 
 	{
 		scheduleEntryId:"%s"
 	}, 

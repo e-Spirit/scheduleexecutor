@@ -6,15 +6,11 @@ import de.espirit.firstspirit.access.schedule.ScheduleEntry;
 
 public class ScheduleEntryOption implements Option {
 
-	private final long id;
-	private final String name;
-	private final ScheduleEntry value;
+	private ScheduleEntry scheduleEntry;
 
 
 	public ScheduleEntryOption(ScheduleEntry scheduleEntry) {
-		name = scheduleEntry.getName();
-		id = scheduleEntry.getId();
-		value = scheduleEntry;
+		this.scheduleEntry = scheduleEntry;
 	}
 
 
@@ -26,13 +22,13 @@ public class ScheduleEntryOption implements Option {
 
 	@Override
 	public String getLabel(Language language) {
-		return name;
+		return scheduleEntry.getName();
 	}
 
 
 	@Override
 	public String getLabel(String languageAbbreviation) {
-		return name;
+		return scheduleEntry.getName();
 	}
 
 
@@ -50,13 +46,13 @@ public class ScheduleEntryOption implements Option {
 
 	@Override
 	public String getKey() {
-		return Long.toString(id);
+		return Long.toString(scheduleEntry.getId());
 	}
 
 
 	@Override
 	public Object getValue() {
-		return value;
+		return scheduleEntry;
 	}
 
 
@@ -66,20 +62,17 @@ public class ScheduleEntryOption implements Option {
 	}
 
 
-	// muss implementiert werden, um den Vergleich ob ein gültiger wert im formular vorhanden ist.
-	// Es reicht an dieser stelle nicht die standart implementierung von Options zu nutzen
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof ScheduleEntryOption)) {
-			return super.equals(obj);
+			super.equals(obj);
 		}
-		return name.equals(((ScheduleEntryOption) obj).name);
+		return obj != null && scheduleEntry.equals(((ScheduleEntryOption) obj).scheduleEntry);
 	}
 
 
 	@Override
 	public int hashCode() {
-		return name.hashCode();
+		return scheduleEntry.hashCode();
 	}
-
 }

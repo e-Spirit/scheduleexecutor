@@ -21,11 +21,11 @@ import de.espirit.firstspirit.ui.operations.ShowFormDialogOperation;
 import de.espirit.firstspirit.webedit.plugin.toolbar.ExecutableToolbarActionsItem;
 import de.espirit.firstspirit.webedit.server.ClientScriptOperation;
 
-public class ScheduleExecutionWebeditToolbarItem implements ExecutableToolbarActionsItem {
+public class ScheduleExecutionWebeditItemsPlugin implements ExecutableToolbarActionsItem {
 
-	private static final String SCRIPT = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/execute.js", ScheduleExecutionWebeditToolbarItem.class);
-	private static final String GOM_SOURCE = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/selectScheduleEntry.form.xml", ScheduleExecutionWebeditToolbarItem.class);
-	private static final String STARTNODE_GOM_SOURCE = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/selectStartNode.form.xml", ScheduleExecutionWebeditToolbarItem.class);
+	private static final String GOM_SOURCE = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/selectScheduleEntry.form.xml", ScheduleExecutionWebeditToolbarActionsItemsPlugin.class);
+	private static final String SCRIPT = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/execute.js", ScheduleExecutionWebeditToolbarActionsItemsPlugin.class);
+	private static final String STARTNODE_GOM_SOURCE = Resources.asString("/files/com/espirit/ps/psci/scheduleexecutor/selectStartNode.form.xml", ScheduleExecutionWebeditToolbarActionsItemsPlugin.class);
 
 
 	@Override

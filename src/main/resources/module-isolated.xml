@@ -10,23 +10,23 @@
 			<class>com.espirit.ps.psci.scheduleexecutor.ScheduleEntryValueProvider</class>
 		</public>
 		<public>
-			<name>ExecuteScheduleEntry</name>
-			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ExecuteScheduleEntry</class>
-			<hidden>true</hidden>
-		</public>
-		<public>
 			<name>ScheduleExecutionWebeditToolbarActionsItemsPlugin</name>
 			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ScheduleExecutionWebeditToolbarActionsItemsPlugin</class>
 			<hidden>true</hidden>
 		</public>
 		<public>
-			<name>ShowLogFile</name>
-			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ShowLogFile</class>
+			<name>ExecuteScheduleEntry</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ExecuteScheduleEntry</class>
 			<hidden>true</hidden>
 		</public>
 		<public>
 			<name>ResourceLoader</name>
 			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ResourceLoader</class>
+			<hidden>true</hidden>
+		</public>
+		<public>
+			<name>ShowLogFile</name>
+			<class>com.espirit.ps.psci.scheduleexecutor.plugin.ShowLogFile</class>
 			<hidden>true</hidden>
 		</public>
 		<web-app scopes="global,project">
